@@ -1,40 +1,37 @@
 # Mental-Health-Assistance-Project
 **Project Overview:**
 
-This project focuses on creating a mental health assistant that integrates machine learning techniques for analyzing user data and providing personalized recommendations for mental well-being. The assistant uses a dataset that contains information about mental health parameters, such as stress levels, mood swings, coping strategies, and social interactions.
+A mental-health counseling assistant fine-tuned from the Llama-2-7B model using a curated dataset of psychologist-verified Q&A pairs to deliver supportive, safe, and context-aware responses.
 
 **Key Features**
 
-**Data Integration:** The project uses a comprehensive mental health dataset with columns related to stress, mood swings, coping struggles, and social interactions. This data is integrated into the system to provide insights based on user inputs.
-
-**Data Preprocessing:** The dataset is cleaned and preprocessed to ensure the data is in a suitable format for analysis. Missing values are handled, and relevant features are extracted for further analysis.
-
-**Predictive Modeling:** The system leverages machine learning models to predict mental health states and suggest coping mechanisms based on input from the user.
-
-**Personalized Recommendations:** Based on the analysis of user data, the assistant suggests coping strategies, social interaction tips, and other recommendations tailored to the user's needs.
-
-**User Interaction:** The assistant can engage with users through text input, asking for details about their mood and stress levels to provide real-time feedback and suggestions.
+- Fine-tuned Llama-2-7B using QLoRA and 4-bit quantization for efficient training
+- Structured prompt format aligned with Llama’s conversational style
+- Interactive chatbot interface built with ipywidgets
+- Produces context-relevant mental-health guidance
 
 **Technologies Used:**
 
-**Python** for data processing and machine learning modeling.
-**Transformers Library** for integrating NLP-based models.
-**Scikit-learn** for predictive modeling and data preprocessing.
-**Pandas & NumPy** for data manipulation.
-**Matplotlib/Seaborn** for visualizations (if applicable).
+- Llama-2-7B (Meta)
+- QLoRA, BitsAndBytes (4-bit quantization)
+- Hugging Face Transformers & Datasets
+- Python, Jupyter Notebook
+- Ipywidgets
 
 **Model Overview:**
 
-A machine learning model trained on mental health data is used to predict various mental states and recommend appropriate coping mechanisms or actions.
-The model utilizes regression or classification techniques to generate output based on user input.
+The model was trained on Amod/mental_health_counseling_conversations (3,512 Q&A pairs from counselchat.com), using Llama-specific formatted prompts for 3 epochs. The goal was to generate concise, supportive mental-health responses and redirect users to appropriate resources when needed.
 
 **Challenges Encountered:**
 
-Dealing with noisy or incomplete data and handling missing values effectively.
-Ensuring that the recommendations provided by the assistant are both relevant and practical for users' mental health needs.
+- Occasionally short, repetitive, or vague responses
+- Occasional hallucinations in advice
+- Limited dataset size restricting diversity of counseling scenarios
+- Basic UI constraints in ipywidgets
 
 **Future Improvements:**
 
-Expanding the dataset to include more diverse user inputs.
-Improving the recommendation system by using more advanced models like deep learning.
-Developing a more interactive user interface for easier accessibility.
+- Expand dataset with more diverse counseling cases
+- Enhance prompt engineering and safety alignment
+- Integrate a richer, more intuitive UI (web app / chatbot interface)
+- Upgrade to higher-capacity models for better depth and nuance
